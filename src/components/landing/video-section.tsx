@@ -40,7 +40,7 @@ export function VideoSection() {
             <video
               ref={videoRef}
               className="w-full h-full object-cover"
-              src="https://videos.pexels.com/video-files/853879/853879-hd_1280_720_24fps.mp4"
+              src="https://videos.pexels.com/video-files/7578544/7578544-hd_1920_1080_25fps.mp4"
               muted
               loop
               playsInline

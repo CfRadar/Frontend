@@ -3,8 +3,8 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: 'Monkey Prints',
-  description: 'A modern platform for creative portfolios.',
+  title: 'Artifex',
+  description: 'Design and print your custom T-shirts.',
 };
 
 export default function RootLayout({

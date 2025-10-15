@@ -1,21 +1,21 @@
 import { ScrollAnimationWrapper } from "@/components/shared/scroll-animation-wrapper";
-import { PenTool, Share2, Target } from "lucide-react";
+import { Palette, Share2, Gem } from "lucide-react";
 
 const features = [
   {
-    icon: <PenTool className="w-8 h-8 text-accent" />,
-    title: "Craft Your Narrative",
-    description: "Build a stunning visual story that captures your essence. Our platform makes it easy to arrange and present your work in a compelling, cinematic flow.",
+    icon: <Palette className="w-8 h-8 text-accent" />,
+    title: "Intuitive Design Studio",
+    description: "Our easy-to-use editor lets you upload artwork, add text, and play with colors to create the perfect T-shirt design in minutes.",
+  },
+  {
+    icon: <Gem className="w-8 h-8 text-accent" />,
+    title: "Premium Quality Prints",
+    description: "We use high-quality materials and printing techniques to ensure your designs look sharp, feel great, and last long.",
   },
   {
     icon: <Share2 className="w-8 h-8 text-accent" />,
-    title: "Seamless Sharing",
-    description: "Share your portfolio with a single link. Embed it on your website, share on social media, or send it directly to clients and collaborators.",
-  },
-  {
-    icon: <Target className="w-8 h-8 text-accent" />,
-    title: "Engage Your Audience",
-    description: "Move beyond static images. With auto-playing video, you create an immersive experience that holds attention and leaves a lasting impression.",
+    title: "Sell Your Creations",
+    description: "Easily set up a storefront, share your designs on social media, and start selling your custom T-shirts to a global audience.",
   },
 ];
 
@@ -25,10 +25,10 @@ export function DescriptiveSections() {
       <div className="container mx-auto px-4">
         <ScrollAnimationWrapper className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold font-headline text-accent">
-              Bring Your Work to Life
+              Create. Print. Sell.
             </h2>
             <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
-              Discover the features that make Monkey Prints the ultimate tool for modern creatives.
+              Everything you need to bring your T-shirt ideas to life is right here.
             </p>
         </ScrollAnimationWrapper>
         <div className="grid md:grid-cols-3 gap-8 md:gap-12">
