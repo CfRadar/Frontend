@@ -1,3 +1,16 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "customization-image",
+      "description": "A person customizing a T-shirt on a large screen.",
+      "imageUrl": "https://picsum.photos/seed/custom/600/400",
+      "imageHint": "designing tshirt"
+    },
+    {
+      "id": "editor-image",
+      "description": "A close-up of a T-shirt design in an editor interface.",
+      "imageUrl": "https://picsum.photos/seed/editor/600/400",
+      "imageHint": "tshirt editor"
+    }
+  ]
 }

@@ -4,6 +4,8 @@ import { HeroSection } from "@/components/landing/hero-section";
 import { VideoSection } from "@/components/landing/video-section";
 import { DescriptiveSections } from "@/components/landing/descriptive-sections";
 import { CtaSection } from "@/components/landing/cta-section";
+import { CustomizationSection } from "@/components/landing/customization-section";
+import { EditorSection } from "@/components/landing/editor-section";
 
 export default function Home() {
   return (
@@ -13,6 +15,8 @@ export default function Home() {
         <HeroSection />
         <VideoSection />
         <DescriptiveSections />
+        <CustomizationSection />
+        <EditorSection />
         <CtaSection />
       </main>
       <Footer />

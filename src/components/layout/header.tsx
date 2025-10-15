@@ -38,7 +38,7 @@ export function Header() {
     <header className="absolute top-0 left-0 w-full py-6 px-4 md:px-8 z-30 bg-neutral-900/50 backdrop-blur-sm">
       <div className="container mx-auto flex justify-between items-center">
         <Link href="/" className="flex items-center gap-2 group">
-          <span className="text-2xl font-bold tracking-tighter text-foreground">
+          <span className="text-2xl font-bold tracking-tighter text-foreground animate-fade-in-down">
             Monkey Prints
           </span>
         </Link>
