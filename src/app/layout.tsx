@@ -3,7 +3,7 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: 'Artifex',
+  title: 'Monkey Prints',
   description: 'Design and print your custom T-shirts.',
 };
 
