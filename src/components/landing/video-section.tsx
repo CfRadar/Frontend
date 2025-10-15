@@ -13,7 +13,12 @@ export function VideoSection() {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          video.play().catch(error => console.error("Video play failed:", error));
+          const playPromise = video.play();
+          if (playPromise !== undefined) {
+            playPromise.catch(error => {
+              console.error("Video play failed:", error);
+            });
+          }
         } else {
           video.pause();
         }
@@ -26,7 +31,7 @@ export function VideoSection() {
     observer.observe(video);
 
     return () => {
-      if(video) {
+      if (video) {
         observer.unobserve(video);
       }
     };
