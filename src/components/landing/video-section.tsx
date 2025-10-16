@@ -16,6 +16,7 @@ export function VideoSection() {
                 width="100%"
                 style={{border: 'none', width: '100%', height: '100%', position: 'absolute', left: '0px', top: '0px', overflow: 'hidden'}}
               ></iframe>
+              <div style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 1}}></div>
             </div>
           </div>
         </ScrollAnimationWrapper>
