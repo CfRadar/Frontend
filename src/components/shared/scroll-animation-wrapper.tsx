@@ -8,12 +8,14 @@ type ScrollAnimationWrapperProps = {
   children: ReactNode;
   className?: string;
   delay?: number;
+  animation?: string;
 };
 
 export function ScrollAnimationWrapper({
   children,
   className,
   delay = 0,
+  animation,
 }: ScrollAnimationWrapperProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [isIntersecting, setIntersecting] = useState(false);
@@ -31,7 +33,7 @@ export function ScrollAnimationWrapper({
         }
       },
       {
-        threshold: 0.1,
+        threshold: 0.2,
       }
     );
 
@@ -47,14 +49,19 @@ export function ScrollAnimationWrapper({
     };
   }, [delay]);
 
+  const defaultAnimation = "transition-all duration-700 ease-out";
+  const intersectingState = animation ? '' : 'opacity-100 translate-y-0 scale-100';
+  const nonIntersectingState = animation ? 'opacity-0' : 'opacity-0 translate-y-5 scale-95';
+
+
   return (
     <div
       ref={ref}
       className={cn(
-        "transition-all duration-700 ease-out",
+        defaultAnimation,
         isIntersecting
-          ? "opacity-100 translate-y-0 scale-100"
-          : "opacity-0 translate-y-5 scale-95",
+          ? `${intersectingState} ${animation}`
+          : nonIntersectingState,
         className
       )}
     >

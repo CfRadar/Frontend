@@ -6,7 +6,7 @@ export function VideoSection() {
   return (
     <section className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4">
-        <ScrollAnimationWrapper>
+        <ScrollAnimationWrapper animation="animate-brush-in">
           <div className="rounded-lg overflow-hidden shadow-2xl shadow-primary/10 border border-primary/20">
             <div style={{position: 'relative', width: '100%', height: '0px', paddingBottom: '56.250%'}}>
               <iframe
