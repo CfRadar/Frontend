@@ -1,59 +1,23 @@
 "use client";
 
-import { useRef, useEffect } from "react";
 import { ScrollAnimationWrapper } from "@/components/shared/scroll-animation-wrapper";
 
 export function VideoSection() {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          const playPromise = video.play();
-          if (playPromise !== undefined) {
-            playPromise.catch(error => {
-              // Auto-play was prevented
-              console.error("Video play failed:", error);
-            });
-          }
-        } else {
-          video.pause();
-        }
-      },
-      {
-        threshold: 0.5, // 50% of video is visible
-      }
-    );
-
-    observer.observe(video);
-
-    return () => {
-      if (video) {
-        observer.unobserve(video);
-      }
-    };
-  }, []);
-
   return (
     <section className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4">
         <ScrollAnimationWrapper>
           <div className="rounded-lg overflow-hidden shadow-2xl shadow-primary/10 border border-primary/20">
-            <video
-              ref={videoRef}
-              className="w-full h-full object-cover"
-              src="https://streamable.com/gxammj"
-              muted
-              loop
-              playsInline
-              preload="metadata"
-            >
-              Your browser does not support the video tag.
-            </video>
+            <div style={{position: 'relative', width: '100%', height: '0px', paddingBottom: '56.250%'}}>
+              <iframe
+                allow="fullscreen;autoplay"
+                allowFullScreen
+                height="100%"
+                src="https://streamable.com/e/gxammj?autoplay=1&muted=1"
+                width="100%"
+                style={{border: 'none', width: '100%', height: '100%', position: 'absolute', left: '0px', top: '0px', overflow: 'hidden'}}
+              ></iframe>
+            </div>
           </div>
         </ScrollAnimationWrapper>
       </div>
