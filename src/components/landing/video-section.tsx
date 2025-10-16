@@ -16,6 +16,7 @@ export function VideoSection() {
           const playPromise = video.play();
           if (playPromise !== undefined) {
             playPromise.catch(error => {
+              // Auto-play was prevented
               console.error("Video play failed:", error);
             });
           }
@@ -45,7 +46,7 @@ export function VideoSection() {
             <video
               ref={videoRef}
               className="w-full h-full object-cover"
-              src="https://streamable.com/gxammj"
+              src="https://videos.pexels.com/video-files/3254012/3254012-hd_1920_1080_25fps.mp4"
               muted
               loop
               playsInline
