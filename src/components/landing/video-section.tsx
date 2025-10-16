@@ -10,10 +10,9 @@ export function VideoSection() {
           <div className="rounded-lg overflow-hidden shadow-2xl shadow-primary/10 border border-primary/20">
             <div style={{position: 'relative', width: '100%', height: '0px', paddingBottom: '56.250%'}}>
               <iframe
-                allow="fullscreen;autoplay"
-                allowFullScreen
+                allow="autoplay"
                 height="100%"
-                src="https://streamable.com/e/gxammj?autoplay=1&muted=1"
+                src="https://streamable.com/e/gxammj?autoplay=1&muted=1&controls=0"
                 width="100%"
                 style={{border: 'none', width: '100%', height: '100%', position: 'absolute', left: '0px', top: '0px', overflow: 'hidden'}}
               ></iframe>
