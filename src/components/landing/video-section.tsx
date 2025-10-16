@@ -46,7 +46,7 @@ export function VideoSection() {
             <video
               ref={videoRef}
               className="w-full h-full object-cover"
-              src="https://videos.pexels.com/video-files/34320689/34320689-hd_1920_1080_30fps.mp4"
+              src="https://streamable.com/gxammj"
               muted
               loop
               playsInline
